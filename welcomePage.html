@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Faculty Navigation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+
+
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        background-color: #0a1a14;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        }
+
+        body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: 
+            linear-gradient(rgba(0, 255, 150, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 255, 150, 0.04) 1px, transparent 1px);
+        background-size: 50px 50px;
+        pointer-events: none;
+        z-index: 0;
+        }
+
+        .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 20px;
+        position: relative;
+        z-index: 1;
+        }
+
+        .badge {
+        display: inline-block;
+        background: rgba(0, 255, 150, 0.1);
+        border: 1px solid rgba(0, 255, 150, 0.3);
+        color: #00ff96;
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        }
+
+        .hero {
+        text-align: center;
+        margin-bottom: 60px;
+        }
+
+        .hero h1 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: clamp(48px, 8vw, 90px);
+        line-height: 1;
+        margin-bottom: 16px;
+        color: white;
+        }
+
+        .hero h1 span {
+        color: #00e5cc;
+        }
+
+        .hero .subtitle {
+        font-style: italic;
+        color: #00e5cc;
+        font-size: 18px;
+        margin-bottom: 28px;
+        }
+
+        .hero .description {
+        max-width: 640px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.7;
+        font-size: 15px;
+        }
+
+        .hero .description strong {
+        color: white;
+        }
+
+        .stops-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 50px;
+        align-items: center;
+        }
+
+        .arrow {
+        font-size: 28px;
+        color: rgba(0, 229, 204, 0.6);
+        text-align: center;
+        }
+
+        .stop-card {
+        max-width : 340px;
+        flex:1 ;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 14px 18px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        
+        }
+
+        .stop-card:hover {
+        background: rgba(0, 229, 204, 0.08);
+        border-color: rgba(0, 229, 204, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 229, 204, 0.1);
+        }
+
+        .stop-card.destination {
+        background: rgba(0, 229, 204, 0.07);
+        border-color: rgba(0, 229, 204, 0.35);
+        }
+
+        .stop-card.destination:hover {
+        background: rgba(0, 229, 204, 0.15);
+        border-color: #00e5cc;
+        box-shadow: 0 12px 40px rgba(0, 229, 204, 0.2);
+        }
+
+        .stop-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #00e5cc;
+        margin-bottom: 6px;
+        font-weight: 600;
+        }
+
+        .stop-label.destination-label {
+        color: #ff6b6b;
+        }
+
+        .stop-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        }
+
+        .stop-desc {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-start {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 18px 48px;
+        background: #00ff96;
+        color: #0a1a14;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        }
+
+        .btn-start:hover {
+        background: #00e5cc;
+        transform: scale(1.04);
+        box-shadow: 0 0 30px rgba(0, 255, 150, 0.4);
+        }
+
+        @media (max-width: 600px) {
+        .stops-grid {
+            grid-template-columns: 1fr;
+        }
+        .arrow {
+            transform: rotate(90deg);
+        }
+}</style>
+
+    <body>
+      <div class = "container">
+        <section class="hero">
+            <div class="badge">📍Faculty Navigation System</div>
+            <h1>Welcome to the <br> Faculty
+                <span>Navigation </span>
+            </h1>
+
+            <p class="subtitle">Find Your Way to the Main Computer Laboratory!</p>
+            <p class="description">
+        Not sure how to get to the <strong>ICT Lab</strong>? We've got you covered.
+        This guide will walk you through the lab door.
+        Just click each photo to move forward .</p>
+        
+        </section>
+
+
+        <!-- stops grid -->
+        <div class="stops-grid  "> 
+
+            <!--stop 1--> 
+            <div class="stop-card" onclick=alert('Stop 1:Campus Gate - Starting Point!')"> 
+                <div class ="stop-label"> 01</div> 
+                <div class ="stop-title">Campus Gate</div>
+                <div class = "stop-desc">Start here at the main faculty entrance corrider </div>
+            </div>
+
+            <div class = "arrow">------></div>
+
+            <!--stop 2-->
+            <div class="stop-card" onclick=alert('Stop 2:Administration Bilding - Turn Right!')"> 
+                <div class ="stop-label"> 02</div> 
+                <div class ="stop-title">Administration Building</div>
+                <div class = "stop-desc">Turn right upon entering the administration building.</div>
+            </div>
+
+            <div class = "arrow">------></div>
+
+            <!--stop 3-->
+            <div class="stop-card" onclick=alert('Stop 3:Follow the road - Keep Straight!')"> 
+                <div class ="stop-label"> 03</div> 
+                <div class ="stop-title">Continue Straight</div>
+                <div class = "stop-desc"> keep going straight </div>
+            </div>
+
+            <div class = "arrow">------></div>
+
+            <!--stop 4-->
+            <div class="stop-card" onclick=alert('Stop 4:Collosium !')"> 
+                <div class ="stop-label"> 04</div> 
+                <div class ="stop-title">Collosium </div>
+                <div class = "stop-desc"> you meet the collosium </div>
+            </div>
+
+            <div class = "arrow">------></div>
+
+            <!--stop 5-->
+            <div class="stop-card" onclick=alert('Stop 5:lift Area - Take the elevator !')"> 
+                <div class ="stop-label"> 05</div> 
+                <div class ="stop-title">Lift Area</div>
+                <div class = "stop-desc">Find the lift on the ground floor of the building </div>
+            </div>
+
+            <div class = "arrow">------></div>
+
+            <!--stop 6-->
+            <div class="stop-card" onclick=alert('Stop 6: 2nd Floor - Almost there!')"> 
+                <div class ="stop-label"> 06</div> 
+                <div class ="stop-title">2nd Floor </div>
+                <div class = "stop-desc">Exit the lift and head towards the ICT section </div>
+            </div>
+
+            <div class = "arrow">------></div>
+
+            <!--stop 7-->
+            <div class="stop-card" onclick=alert('Stop 7:Find the ICT Lab D201 !')"> 
+                <div class ="stop-label"> 07</div> 
+                <div class ="stop-title">ICT Lab D201 </div>
+                <div class ="stop desc">You have arrived at your destination!</div>
+            </div>
+
+            <div class = "arrow">------></div>  
+
+            <!--stop 8-->
+            <div class="stop-card" onclick=alert('Stop 8:Welcome to the ICT Lab!')"> 
+                <div class ="stop-label"> 08</div> 
+                <div class ="stop-title">Welcome!</div>
+                <div class = "stop-desc">Enjoy your time at the ICT Lab!</div>
+            </div>
+
+        </div>
+        
+         <button class="btn-start" onclick="alert('Navigation started! Follow the stops above.')">
+            Start Navigation
+        </button>
+
+        </div>
+    </body>
+</html>
+
+        
+
+
+
+                
+            
+    
