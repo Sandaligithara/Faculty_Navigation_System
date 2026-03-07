@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Nav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0f0a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 26px;
+            color: #00ff96;
+            letter-spacing: 3px;
+        }
+
+        .dest-badge {
+            background: #0d2018;
+            border: 1px solid rgba(0, 229, 204, 0.5);
+            color: #00e5cc;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        .stop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .stop-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 64px;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .stop-title span {
+            color: #00e5cc;
+        }
+
+        .step-counter {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        /* ── INSTRUCTION BOX ── */
+        .instruction-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .instruction-box .icon {
+            font-size: 26px;
+        }
+
+        .instruction-box p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .instruction-box p strong {
+            color: white;
+        }
+
+
+        .click-hint {
+            color: #00e5cc;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            border-left: 4px solid #00e5cc;
+            padding-left: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── PHOTO AREA ── */
+        .photo-wrapper {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 22px;
+            width: 100%;
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-wrapper:hover img {
+            filter: brightness(1.08);
+        }
+
+
+        .click-zone {
+            position: absolute;
+            border: 2px dashed #00e5cc;
+            border-radius: 14px;
+            background: rgba(0, 229, 204, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .click-zone:hover {
+            background: rgba(0, 229, 204, 0.18);
+        }
+
+        .zone-btn {
+            background: #00e5cc;
+            color: #0a1a14;
+            padding: 12px 26px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            pointer-events: none;
+        }
+
+
+        .location-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .loc-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 20px 24px;
+        }
+
+        .loc-label {
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .loc-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 14px 20px;
+            }
+
+            .stop-title {
+                font-size: 44px;
+            }
+
+            .location-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-wrapper img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">Faculty Navigation</div>
+        <div class="dest-badge">🎯 Destination: ICT Lab</div>
+    </div>
+
+
+    <div class="content">
+
+
+        <div class="stop-header">
+            <div class="stop-title">Faculty <span>Road</span></div>
+            <div class="step-counter">STEP 03</div>
+        </div>
+
+        <!-- INSTRUCTION -->
+        <div class="instruction-box">
+            <div class="icon">🛣️</div>
+            <p>
+                Walk along the <strong>Faculty Road</strong> — <strong> Administration Building</strong>
+                will be visible on your right side .
+            </p>
+        </div>
+
+
+        <div class="click-hint">Click anywhere on the image to continue</div>
+
+
+        <div class="photo-wrapper">
+            <img src="https://res.cloudinary.com/dlzvezihz/image/upload/v1772899136/facroad_yqkh3b.jpg" alt="Faculty"
+                usemap="#adminmap">
+
+            <map name="adminmap">
+                <area shape="default" href="file:///C:/Users/USER/Faculty_Navigation_System/featureSlide5.html">
+            </map>
+
+
+            <div class="click-zone" style="top:25%; left:30%; width:40%; height:50%;"
+                onclick="window.location.href='file:///C:/Users/USER/Faculty_Navigation_System/featureSlide5.html'">
+                <div class="zone-btn">Click to Continue</div>
+            </div>
+        </div>
+
+
+        <div class="location-cards">
+
+            <div class="loc-card">
+                <div class="loc-label">Current Location</div>
+                <div class="loc-name">Faculty Road</div>
+            </div>
+
+            <div class="loc-card">
+                <div class="loc-label">Next Stop</div>
+                <div class="loc-name">Academic Bulding</div>
+            </div>
+
+        </div>
+
+        <!-- BACK BUTTON -->
+        <a href="file:///C:/Users/USER/Faculty_Navigation_System/featureSlide3.html" class="btn-back">← Back</a>
+
+    </div>
+
+</body>
+
+</html>
