@@ -12,11 +12,11 @@ A step-by-step HTML image map based navigation system for the Faculty of Technol
 
 ## 👥 Team Members
 
-| Name | Branch |
+| Name | GitHub |
 |------|--------|
-| Sandali | feature/slides-1-to-3 |
-| Menuri | feature/slides-4-to-6 |
-| wathsala | feature/slides-7-last |
+| Sandali | [@Sandaligithara](https://github.com/Sandaligithara) |
+| Menuri | [menuri-username](https://github.com/Menuri5) |
+| Wathsala | [@member3-username](https://github.com/SandaliWathsala) |
 
 ---
 
