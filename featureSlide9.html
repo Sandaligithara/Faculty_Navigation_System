@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Nav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0f0a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 26px;
+            color: #00ff96;
+            letter-spacing: 3px;
+        }
+
+        .dest-badge {
+            background: #0d2018;
+            border: 1px solid rgba(0, 229, 204, 0.5);
+            color: #00e5cc;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+
+        .center {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+
+        .card {
+            background: rgba(0, 229, 204, 0.05);
+            border: 1px solid rgba(0, 229, 204, 0.3);
+            border-radius: 20px;
+            padding: 60px 50px;
+            max-width: 780px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .card .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+
+        .card h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 64px;
+            color: #00e5cc;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+
+        .card p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.7;
+            max-width: 540px;
+            margin: 0 auto 32px;
+        }
+
+        .card p strong {
+            color: white;
+        }
+
+
+
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 16px 32px;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+
+        .btn-home {
+            background: #00e5cc;
+            border: none;
+            color: #0a1a14;
+            padding: 16px 36px;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-home:hover {
+            background: #00ff96;
+        }
+
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 14px 20px;
+            }
+
+            .card {
+                padding: 40px 24px;
+            }
+
+            .card h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">Faculty Navigation</div>
+        <div class="dest-badge">🎯 Destination: ICT Lab</div>
+    </div>
+
+
+    <div class="center">
+        <div class="card">
+
+
+            <div class="icon">🖥️</div>
+
+
+            <h1>Welcome !</h1>
+
+
+            <p>
+                Welcome to the <strong>Main Computer Laboratory (ICT Lab)</strong>
+                of the Faculty of Technology. This is where students work on
+                programming practicals, web development, database systems,
+                and other ICT coursework. The lab is open during faculty hours.
+            </p>
+
+
+            <div class="buttons">
+                <a href="file:///C:/Users/USER/Faculty_Navigation_System/featureSlide8.html" class="btn-back">← Back</a>
+                <a href="file:///C:/Users/USER/Faculty_Navigation_System/welcomePage.html" class="btn-home">↩ Back to
+                    Home</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
