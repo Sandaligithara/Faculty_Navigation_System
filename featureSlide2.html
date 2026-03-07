@@ -15,12 +15,13 @@
         }
 
         body {
-            background: #0a0f0a;
+            background: rgb(2, 3, 2);
             color: white;
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
         }
 
+        /* ── NAVBAR ── */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -78,6 +79,7 @@
             font-weight: 600;
         }
 
+        /* ── INSTRUCTION BOX ── */
         .instruction-box {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -87,6 +89,8 @@
             gap: 16px;
             align-items: flex-start;
             margin-bottom: 18px;
+            text-align: center;
+            justify-content: center;
         }
 
         .instruction-box .icon {
@@ -97,6 +101,8 @@
             font-size: 17px;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.7;
+            text-align: center;
+
         }
 
         .instruction-box p strong {
@@ -127,7 +133,6 @@
             height: 420px;
             object-fit: cover;
             display: block;
-            border-radius: 18px;
         }
 
         .photo-wrapper:hover img {
@@ -142,12 +147,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
         }
 
         .click-zone:hover {
             background: rgba(0, 229, 204, 0.18);
         }
+
 
         .zone-btn {
             background: #00e5cc;
@@ -159,6 +164,7 @@
             letter-spacing: 2px;
             pointer-events: none;
         }
+
 
         .location-cards {
             display: grid;
@@ -189,6 +195,7 @@
             color: white;
         }
 
+
         .btn-back {
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid rgba(255, 255, 255, 0.15);
@@ -208,6 +215,7 @@
             color: white;
         }
 
+        /* ── RESPONSIVE — phone screens ── */
         @media (max-width: 600px) {
             .navbar {
                 padding: 14px 20px;
@@ -241,34 +249,36 @@
 
 
         <div class="stop-header">
-            <div class="stop-title">Lift <span>Area</span></div>
-            <div class="step-counter">STEP 05</div>
+            <div class="stop-title">Faculty <span>Gate</span></div>
+            <div class="step-counter">STEP 01 </div>
         </div>
 
         <!-- INSTRUCTION -->
         <div class="instruction-box">
-            <div class="icon">🛗</div>
+            <div class="icon">🚶</div>
             <p>
-                There is a lift open and step it. 🛗
-                Press <strong>Floor 2</strong> on the right panel.
-                The <strong>02 nd Floor</strong> is just seconds away! ⚡
+                Welcome to the <strong>Faculty of Technology</strong>,
+                <strong>University of Colombo</strong>
+                You are standing at the <strong>main Faculty Entrance Gate</strong>.
+                Follow the navigation steps carefully.
             </p>
         </div>
 
-        <div class="click-hint">Click anywhere on the image to continue</div>
 
+        <div class="click-hint"> Click anywhere on the image to continue</div>
 
+        <!-- PHOTO WITH CLICKABLE AREA -->
         <div class="photo-wrapper">
-            <img src="https://res.cloudinary.com/dlzvezihz/image/upload/v1772899160/lift_b4wlo8.jpg" alt="Lift Area"
-                usemap="#collosiummap">
 
-            <map name="collosiummap">
-                <area shape="default" href="featureSlide7.html">
+            <img src="https://res.cloudinary.com/dlzvezihz/image/upload/v1772899148/gate_jbmbzr.jpg" alt="Campus Gate corridor" usemap="#clickmap">
+
+            <map name="clickmap">
+                <area shape="default" href="featureSlide3.html">
             </map>
 
-
-            <div class="click-zone" style="top:25%; left:30%; width:40%; height:60%;"
-                onclick="window.location.href='featureSlide7.html'">
+            <!-- Dashed box -->
+            <div class="click-zone" style="top:25%; left:30%; width:40%; height:50%;"
+                onclick="window.location.href='featureSlide3.html'; ">
                 <div class="zone-btn">Click to Continue</div>
             </div>
         </div>
@@ -278,19 +288,18 @@
 
             <div class="loc-card">
                 <div class="loc-label">Current Location</div>
-                <div class="loc-name">Lift Area</div>
+                <div class="loc-name">Faculty Gate</div>
             </div>
 
             <div class="loc-card">
                 <div class="loc-label">Next Stop</div>
-                <div class="loc-name">02 nd Floor</div>
+                <div class="loc-name">Administration Building</div>
             </div>
 
         </div>
 
         <!-- BACK BUTTON -->
-        <a href="featureSlide5.html" class="btn-back">← Back</a>
-
+        <a href="welcomePage.html" class="btn-back">← Back</a>
     </div>
 
 </body>
