@@ -15,7 +15,7 @@
         }
 
         body {
-            background: rgb(2, 3, 2);
+            background: #0a0f0a;
             color: white;
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
@@ -48,11 +48,13 @@
             letter-spacing: 2px;
         }
 
+
         .content {
             max-width: 900px;
             margin: 0 auto;
             padding: 40px 30px;
         }
+
 
         .stop-header {
             display: flex;
@@ -89,8 +91,6 @@
             gap: 16px;
             align-items: flex-start;
             margin-bottom: 18px;
-            text-align: center;
-            justify-content: center;
         }
 
         .instruction-box .icon {
@@ -101,13 +101,12 @@
             font-size: 17px;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.7;
-            text-align: center;
-
         }
 
         .instruction-box p strong {
             color: white;
         }
+
 
         .click-hint {
             color: #00e5cc;
@@ -119,10 +118,11 @@
             letter-spacing: 0.5px;
         }
 
+
         .photo-wrapper {
             position: relative;
             border-radius: 18px;
-            overflow: visible;
+            overflow: hidden;
             cursor: pointer;
             margin-bottom: 22px;
             width: 100%;
@@ -139,6 +139,7 @@
             filter: brightness(1.08);
         }
 
+
         .click-zone {
             position: absolute;
             border: 2px dashed #00e5cc;
@@ -152,7 +153,6 @@
         .click-zone:hover {
             background: rgba(0, 229, 204, 0.18);
         }
-
 
         .zone-btn {
             background: #00e5cc;
@@ -215,7 +215,7 @@
             color: white;
         }
 
-        /* ── RESPONSIVE — phone screens ── */
+
         @media (max-width: 600px) {
             .navbar {
                 padding: 14px 20px;
@@ -238,7 +238,7 @@
 
 <body>
 
-    <!-- NAVBAR -->
+
     <div class="navbar">
         <div class="logo">Faculty Navigation</div>
         <div class="dest-badge">🎯 Destination: ICT Lab</div>
@@ -249,57 +249,54 @@
 
 
         <div class="stop-header">
-            <div class="stop-title">Faculty <span>Gate</span></div>
-            <div class="step-counter">STEP 01 </div>
+            <div class="stop-title">Administration <span>Building</span></div>
+            <div class="step-counter">STEP 02 </div>
         </div>
 
-        <!-- INSTRUCTION -->
+
         <div class="instruction-box">
-            <div class="icon">🚶</div>
+            <div class="icon">🏛️</div>
             <p>
-                Welcome to the <strong>Faculty of Technology</strong>,
-                <strong>University of Colombo</strong>
-                You are standing at the <strong>main Faculty Entrance Gate</strong>.
-                Follow the navigation steps carefully.
+                Walk past the <strong>Administration Building</strong> and you will
+                reach the <strong>Faculty Road</strong>.
+                Continue straight along this road —
+                the <strong>Academic Building</strong> is just ahead! 🎯
             </p>
         </div>
 
+        <div class="click-hint">Click anywhere on the image to continue</div>
 
-        <div class="click-hint"> Click anywhere on the image to continue</div>
-
-        <!-- PHOTO WITH CLICKABLE AREA -->
+        <!-- PHOTO -->
         <div class="photo-wrapper">
+            <img src="https://res.cloudinary.com/dlzvezihz/image/upload/v1772899004/adm_bui_otor7p.jpg" alt="Administration Building" usemap="#adminmap">
 
-            <img src="https://res.cloudinary.com/dlzvezihz/image/upload/v1772899148/gate_jbmbzr.jpg" alt="Campus Gate corridor" usemap="#clickmap">
-
-            <map name="clickmap">
-                <area shape="default" href="file:///C:/Users/USER/Faculty_Navigation_System/featureSlide3.html">
+            <map name="adminmap">
+                <area shape="default" href="file:///C:/Users/USER/Faculty_Navigation_System/featureSlide4.html">
             </map>
 
-            <!-- Dashed box -->
             <div class="click-zone" style="top:25%; left:30%; width:40%; height:50%;"
-                onclick="window.location.href='featureSlide3.html'; ">
+                onclick="window.location.href='file:///C:/Users/USER/Faculty_Navigation_System/featureSlide4.html'">
                 <div class="zone-btn">Click to Continue</div>
             </div>
         </div>
-
 
         <div class="location-cards">
 
             <div class="loc-card">
                 <div class="loc-label">Current Location</div>
-                <div class="loc-name">Faculty Gate</div>
+                <div class="loc-name">Administration Building</div>
             </div>
 
             <div class="loc-card">
                 <div class="loc-label">Next Stop</div>
-                <div class="loc-name">Administration Building</div>
+                <div class="loc-name">Faculty Road</div>
             </div>
 
         </div>
 
         <!-- BACK BUTTON -->
-        <a href="welcomePage.html" class="btn-back">← Back</a>
+        <a href="file:///C:/Users/USER/Faculty_Navigation_System/featureSlide2.html" class="btn-back">← Back</a>
+
     </div>
 
 </body>
