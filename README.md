@@ -14,9 +14,9 @@ A step-by-step HTML image map based navigation system for the Faculty of Technol
 
 | Name | GitHub |
 |------|--------|
-| Sandali | [@Sandaligithara](https://github.com/Sandaligithara) |
-| Menuri | [menuri-username](https://github.com/Menuri5) |
-| Wathsala | [wathsala-username](https://github.com/SandaliWathsala) |
+| Sandali | [Sandali Githara](https://github.com/Sandaligithara) |
+| Menuri | [Menuri Nethasara](https://github.com/Menuri5) |
+| Wathsala | [Sandali Wathsala](https://github.com/SandaliWathsala) |
 
 ---
 
